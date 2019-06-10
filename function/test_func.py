@@ -1,4 +1,9 @@
-from function import add_timers
+from function import def_func
 
-a = add_timers.add_times(1, 2, 3)
-print('a = ', a)
+a = def_func.add_times(1, 2, 3)
+print('a =', a)
+
+print(def_func)
+print(dir(def_func))
+print(def_func.add_times(1, 2, 3))
+print(def_func._file_)

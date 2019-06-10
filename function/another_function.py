@@ -4,7 +4,7 @@ def get_int(msg):
     display msg to the user, return what the user types  as an int
     '''
     text = input(msg)
-    number = int(message)
+    number = int(text)
     return number
 
 
@@ -24,5 +24,38 @@ def sphere_volume(radius):
     print("The volume of your sphere is", volume)
 
 
-print(fused_multiply_add(2, 3, 4))
-print(fused_multiply_add(2, 3, '4'))
+# print(fused_multiply_add(2, 3, 4))
+# print(fused_multiply_add(2, 3, '4'))
+
+
+def amount_to_be_fancy(age):
+    price = age // 2 + 20 + age - 3
+    return price
+
+
+def calc_tip(cost, percent=20, max_value=500):
+    # percent = 20
+    tip = cost * (percent / 100)
+    return min(tip, max_value)
+
+
+def leap_year(year):
+    '''years divisible by 4, 
+       unless they divisible by 100,
+       unless they divisible by 400'''
+
+    div4 = (year % 4) == 0
+    div100 = (year % 100) == 0
+    div400 = (year % 400) == 0
+
+    if div4:
+        if div100:
+            if div400:
+                return True
+            else:
+                return False
+
+        else:
+            return False
+    else:
+        return False
